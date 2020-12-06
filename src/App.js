@@ -20,6 +20,11 @@ function App() {
     const sendMessage = async (e) => {
         e.preventDefault();
 
+        if (formValue === '')
+        {
+            return;
+        }
+
         await messagesRef.add({
             text: formValue,
             sender: username,
