@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root
+{
+  --primary-color: rgb(255, 100, 0);
+  --dark-primary-color: rgb(197, 79, 0);
+  --light-primary-color: rgb(255, 140, 64);
+}
+
+html, body
+{
+  margin: 0;
+  padding: 0;
+}
+
+.app
+{
+  background: rgb(2, 0, 27);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.login-form
+{
+  background: rgba(216, 216, 216, 0.25);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  padding: 50px 0 20px 0;
+}
+
+.login-form .username
+{
+  margin: 0 0 10px 0;
+  font-size: 30px;
+}
+
+.login-form input
+{
+  background: rgb(255, 255, 255);
+  height: 40px;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  padding-left: 7px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.login-form button
+{
+  background: var(--primary-color);
+  color: white;
+  width: 120px;
+  height: 50px; 
+  margin-top: 40px;
+  font-size: 25px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button:hover
+{
+  background: var(--light-primary-color);
+}
+
+.login-form .taken-username
+{
+  color: red;
+  margin: 10px 0 0 0;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.chat-room
+{
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  width: 35vw;
+  height: 500px;
+}
+
+.new-message-form
+{
+  display: flex;
+  width: 35vw;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.new-message-input
+{
+  background: rgb(255, 255, 255);
+  height: 100%;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  padding-left: 7px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  flex: 1;
+}
+
+.new-message-input::placeholder
+{
+  font-size: 18px; /* Same as search-bar's font-size */
+  font-style: italic;
+}
+
+.send-message-button
+{
+  background: var(--primary-color);
+  color: white;
+  width: 100px;
+  height: 40px; /* Same as search-form's height */
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover
+{
+  background: var(--light-primary-color);
+}
+
+.message-container
+{
+  background: rgba(190, 190, 190, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  line-height: 50px; /* Same as height */
+}
+
+.message-sender, .message
+{
+  margin: 0 6px;
+  padding: 0;
+  line-height: 20px; /* About half of message-container's height */
+}
+
+.message-sender
+{
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
