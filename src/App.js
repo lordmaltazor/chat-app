@@ -25,6 +25,8 @@ function App() {
             return;
         }
 
+        e.target.reset();
+
         await messagesRef.add({
             text: formValue,
             sender: username,
@@ -32,8 +34,6 @@ function App() {
         });
 
         setFormValue('');
-
-        e.target.reset();
     }
 
     useEffect(() => { // Everytime the username updates and isn't empty

@@ -39,6 +39,7 @@ function LoginForm({setUsername, usersRef}) {
         <form className="login-form" onSubmit={login}>
             <p className="username">Username:</p>
             <input type="text" onChange={updateUsername}/>
+
             <button>Sign in</button>
 
             <p className="taken-username" style={{visibility: isUsernameTaken ? "visible" : "hidden"}}>That username is taken!</p>
