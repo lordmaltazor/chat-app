@@ -16,6 +16,20 @@ html, body
 body
 {
   background: rgb(2, 0, 27);
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in
+{
+  0%
+  {
+    opacity: 0;
+  }
+
+  100%
+  {
+    opacity: 1;
+  }
 }
 
 .app
@@ -38,7 +52,7 @@ body
   flex-direction: column;
   align-items: center;
   width: 300px;
-  padding: 50px 0 20px 0;
+  padding: 20px 0 20px 0;
 }
 
 @media screen and (max-width: 400px)
@@ -49,7 +63,37 @@ body
   }
 }
 
-.login-form .username
+.tabs
+{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+
+.login-form .login, .login-form .sign-up
+{
+  background: none;
+  color: white;
+  width: 120px;
+  height: 50px; 
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.2s;  
+}
+
+.login-form .login:hover, .login-form .sign-up:hover
+{
+  color: var(--primary-color);
+}
+
+.login-form .username, .login-form .password 
 {
   margin: 0 0 10px 0;
   font-size: 30px;
@@ -57,7 +101,7 @@ body
 
 @media screen and (max-width: 250px)
 {
-  .login-form .username
+  .username, .password 
   {
     font-size: 24px;
   }
@@ -70,7 +114,7 @@ body
   max-width: 225px;
   height: 40px;
   font-size: 18px;
-  margin: 0;
+  margin: 0 0 15px 0;
   padding: 0;
   padding-left: 7px;
   border: none;
@@ -78,13 +122,13 @@ body
   outline: none;
 }
 
-.login-form button
+.login-form .login-button
 {
   background: var(--primary-color);
   color: white;
   width: 120px;
   height: 50px; 
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 25px;
   font-weight: 500;
   border: none;
@@ -93,7 +137,7 @@ body
   transition: background 0.2s;
 }
 
-.login-form button:hover
+.login-form .login-button:hover
 {
   background: var(--light-primary-color);
 }
@@ -151,7 +195,9 @@ body
   border: none;
   outline: none;
   border-radius: 50%;
+  line-height:  50px; /* Same as height */
   font-size: 25px;
+  text-align: center;
   transition: 0.2s;
 }
 
@@ -208,7 +254,7 @@ body
   {
     min-width: 0;
     width: 100vw;
-    margin: 0;
+    margin: 5px 0 0 0;
   }
 
   .chat-room 
