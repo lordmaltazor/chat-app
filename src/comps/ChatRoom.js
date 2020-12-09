@@ -44,7 +44,7 @@ function ChatRoom({messagesRef, sendMessage, updateMessage, username}) {
                 {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} username={username}/>)}
             </div>
 
-            {<button className="enable-realtime-messaging-button" onClick={goToBottom} style={{opacity: realtimeMessaging ? "1" : "0"}}><i className="fas fa-arrow-down"></i></button>}
+            {<button className="enable-realtime-messaging-button" onClick={goToBottom} style={{opacity: (messages && (!realtimeMessaging ? "0" : "1"))}}><i className="fas fa-arrow-down"></i></button>}
 
             <NewMessageForm sendMessage={sendMessage} updateMessage={updateMessage}/>
         </div>
